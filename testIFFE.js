@@ -5,7 +5,7 @@ for (var i = 0; i < 5; i++) {
 	}, 1000);
 }
 
-//Output is what we expected
+//Output is not what we expected
 //5 second
 //5 second
 //5 second
@@ -14,7 +14,6 @@ for (var i = 0; i < 5; i++) {
 
 //Use a IFFE to solve the problem
 for (var i = 0; i < 5; i++) {
-	console.log(i);
 	(function (fixValue) {
 		setTimeout(function() {
 			console.log(fixValue+' second');
@@ -22,3 +21,9 @@ for (var i = 0; i < 5; i++) {
 	})(i); 
 	
 }
+//Output is what we expected
+//0 second
+//1 second
+//2 second
+//3 second
+//4 second
