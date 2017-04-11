@@ -1,3 +1,6 @@
+/*
+	Delegate creation method
+*/
 var Phone = {
 	state: true,
 	meta: {
